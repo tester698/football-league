@@ -1,0 +1,10 @@
+.results {
+  display: flex;
+  justify-content: space-between; /* optional, to add space between items */
+  align-items: flex-start; /* align items to the start of the container */
+}
+
+.results > * {
+  flex: 1; /* make each child take equal space */
+  margin: 0 10px; /* optional, add some margin between items */
+}

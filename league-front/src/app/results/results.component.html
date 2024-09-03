@@ -1,0 +1,50 @@
+<div class="results">
+    <div class="stats">
+        <p-table [value]="teams" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th colspan="7">League Table</th>
+                    <th>Match Results</th>
+                </tr>
+                <tr>
+                    <th>Teams</th>
+                    <th>PTS</th>
+                    <th>P</th>
+                    <th>W</th>
+                    <th>D</th>
+                    <th>L</th>
+                    <th>GD</th>
+                    <td rowspan="">
+                        <app-week [weekUpdated]="weekUpdated"></app-week>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-team>
+                <tr>
+                    <td>{{ team.name }}</td>
+                    <td>{{ team.points || '0' }}</td>
+                    <td>{{ team.matchesPlayed || '0' }}</td>
+                    <td>{{ team.matchesWon || '0' }}</td>
+                    <td>{{ team.matchesDrawn || '0' }}</td>
+                    <td>{{ team.matchesLost || '0' }}</td>
+                    <td>{{ (team.goalsFor - team.goalsAgainst) || '0' }}</td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <tr>
+                    <td colspan="8">
+                        <div class="buttons-container">
+                            <p-button label="Play All" (onClick)="playAllWeeks()"></p-button>
+                            <p-button label="Reset" (onClick)="resetChampionship()"></p-button>
+                            <p-button label="Next Week" (onClick)="playWeek()"></p-button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+    <div class="misc">
+        <app-prediction [weekUpdated]="weekUpdated"  [gamesReset_1]="gamesReset_1"></app-prediction>
+        <app-mass-results [gamesMass]="gamesMass" [gamesReset_2]="gamesReset_2"></app-mass-results>
+    </div>
+</div>

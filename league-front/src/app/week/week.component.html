@@ -1,0 +1,6 @@
+<p>{{currentWeek}}<sup>th</sup> Week Match Result</p>
+<div *ngFor="let game of week">
+  <p>
+    {{game.home_team}} {{game.home_team_goals}} -- {{game.away_team_goals}} {{game.away_team}}
+  </p>
+</div>

@@ -1,0 +1,20 @@
+<p-table [value]="games" styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Week</th>
+            <th>Home</th>
+            <th>HG</th>
+            <th>AG</th>
+            <th>Away</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-game>
+        <tr>
+            <td>{{ game.week }}</td>
+            <td>{{ game.home_team }}</td>
+            <td>{{ game.home_team_goals}}</td>
+            <td>{{ game.away_team_goals }}</td>
+            <td>{{ game.away_team || '0' }}</td>
+        </tr>
+    </ng-template>
+</p-table>

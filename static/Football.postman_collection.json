@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "c49154c8-8676-48ac-af9e-add74fc6767c",
+		"name": "Football",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33520420"
+	},
+	"item": [
+		{
+			"name": "Teams Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/results",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Week",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/results/1",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"results",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Current Week",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/week",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"week"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prediction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/predict",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"predict"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Play Week",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "week_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{URL}}api/results",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"results"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}api/reset",
+					"host": [
+						"{{URL}}api"
+					],
+					"path": [
+						"reset"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost/"
+		}
+	]
+}

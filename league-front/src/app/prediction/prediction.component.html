@@ -1,0 +1,12 @@
+<p-fieldset>
+    <ng-template pTemplate="header">
+        <div class="flex align-items-center gap-2 px-2">
+            <span class="font-bold">{{currentWeek}}<sup>th</sup> Prediction of Championship</span>
+        </div>
+    </ng-template>
+    <div *ngFor="let prediction of predictions">
+        <p>
+            {{prediction.name}} {{prediction.prediction | number:'1.2-2'}}%
+        </p>
+    </div>
+</p-fieldset>

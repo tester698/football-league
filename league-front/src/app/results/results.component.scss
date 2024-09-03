@@ -1,0 +1,28 @@
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+.buttons-container {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 10px;
+ }
+.results {
+  display: flex;
+  justify-content: space-between; /* Space between columns */
+}
+
+.table-column {
+  flex: 2; /* Adjust as needed for the desired width */
+  margin-right: 20px; /* Optional: adds spacing between columns */
+}
+
+.prediction-column {
+  flex: 1; /* Adjust as needed for the desired width */
+  display: flex;
+  flex-direction: column; /* Ensure predictions and results stack vertically */
+}
+
+.prediction-column > * {
+  margin-bottom: 20px; /* Optional: adds spacing between components */
+}
